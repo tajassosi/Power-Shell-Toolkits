@@ -1,9 +1,4 @@
-# PowerShell Scripts Collection
 
-A collection of PowerShell scripts for managing Windows Event Logs, automating tasks, and enhancing system monitoring. This repository is designed to showcase practical scripts for IT administration, cybersecurity tasks, and automation.
-
-
----
 
 # PowerShell Scripts Collection
 
@@ -43,5 +38,5 @@ Notes
 Author
 
 Meysam Tajassosi
-Email
-| LinkedIn
+Email:m.tajassosi@gmail.com
+| LinkedIn:linkedin.com/in/meysam-tajassosi
