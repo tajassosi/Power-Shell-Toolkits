@@ -38,6 +38,10 @@ Notes
 Author
 
 Meysam Tajassosi
-Email:m.tajassosi@gmail.com
-[LinkedIn](https://www.linkedin.com/in/meysam-tajassosi)
+## Author
+
+[Meysam Tajassosi on LinkedIn](https://www.linkedin.com/in/meysam-tajassosi)  
+[Email Me](mailto:m.tajassosi@gmail.com)  
+
+
 
