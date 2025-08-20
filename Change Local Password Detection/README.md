@@ -1,23 +1,47 @@
+# Change Local Password Tracker
 
-PowerShell Script - Local User Password Change Tracker
+## Overview
+This PowerShell script tracks local user password changes on a Windows machine. It records the last password set times for all local users and logs any changes or new password settings in a timestamped log file. The script is useful for system administrators who want to monitor password changes for security and auditing purposes.
 
-This PowerShell script monitors local user accounts on a Windows system and logs whenever their passwords are changed.
-?? Features
+## Features
+- Tracks local user password changes.
+- Logs when a password is set for the first time.
+- Maintains a JSON file to store the previous state for future comparisons.
+- Generates a simple log with timestamps and usernames for easy monitoring.
+- Skips users without a valid password date.
+- Fully compatible with all PowerShell versions (no `-Raw` parameter needed).
+- Saves files in the user's Documents folder by default.
 
-    Tracks password changes for all local users.
-    Maintains a JSON file with the last known password set time.
-    Logs every detected password change with timestamp details.
-    Provides historical logging in a text file for auditing.
+## Files
+- `password_state.json`: Stores the previous state of user passwords. Automatically created if it doesn’t exist.
+- `password_change_log.txt`: Log file that records all password changes. Automatically created if it doesn’t exist.
 
-?? How It Works
+## Usage
 
-    The script checks all local users and retrieves their PasswordLastSet property.
-    It compares the current state against the previously saved state (password_state.json).
-    If a change is detected:
-        A log entry is written to password_change_log.txt with details of the modification.
-    The current state is saved back to password_state.json for future comparisons.
+1. **Run as Administrator**: The script requires admin privileges to access all local users.
+2. **Execute Script**: Run the PowerShell script manually or via Task Scheduler for automated monitoring.
+3. **Check Logs**: Open `password_change_log.txt` in your Documents folder to see password changes.
 
-?? Files Used
+## Default Paths
+- State file: `C:\Users\<YourUser>\Documents\password_state.json`
+- Log file: `C:\Users\<YourUser>\Documents\password_change_log.txt`
 
-    C:\password_state.json ? Stores the last known password state.
-    C:\password_change_log.txt ? Logs all detected password changes.
+You can modify the paths at the beginning of the script if needed:
+
+```powershell
+$statePath = "$env:USERPROFILE\Documents\password_state.json"
+$logPath   = "$env:USERPROFILE\Documents\password_change_log.txt"
+
+Example Log Output
+
+8/20/2025 10:34:08 AM - Admin: Password changed
+8/20/2025 10:34:08 AM - Administrator: Password set
+8/20/2025 10:34:08 AM - Guest: Password set
+
+Notes
+
+Ensure PowerShell is run as Administrator to monitor all local users.
+
+Users with no password or null password set date are skipped automatically.
+
+You can schedule this script to run periodically using Windows Task Scheduler for continuous monitoring.
