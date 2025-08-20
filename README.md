@@ -39,4 +39,4 @@ Author
 
 Meysam Tajassosi
 Email:m.tajassosi@gmail.com
-| LinkedIn:linkedin.com/in/meysam-tajassosi
+LinkedIn:www.linkedin.com/in/meysam-tajassosi
