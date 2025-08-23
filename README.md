@@ -39,7 +39,7 @@ cd Power-Shell-Toolkits
 
     Check Windows Event Viewer or follow the script’s instructions for output.
 
-🛠 Customization
+ Customization
 
     Modify script variables to match your environment (e.g., file paths, log names, event sources).
 
@@ -47,7 +47,7 @@ cd Power-Shell-Toolkits
 
     Change EventId to categorize different events.
 
-📄 Notes
+ Notes
 
     Administrator privileges are required for scripts that create Event Sources.
 
