@@ -57,6 +57,4 @@ cd Power-Shell-Toolkits
 
 👤 Author
 
-[LinkedIn](https://www.linkedin.com/in/meysam-tajassosi)
-[Email Me](mailto:m.tajassosi@gmail.com)  
-
+Meysam Tajassosi
