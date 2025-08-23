@@ -4,15 +4,7 @@ A collection of PowerShell scripts for automation, system management, and event 
 
 ---
 
-## 📂 Repository Overview
 
-- **TxtToEventLog.ps1** – Converts a `.txt` file into Windows Event Log entries.  
-- **OtherScripts/** – Additional PowerShell scripts for system monitoring, log management, and automation tasks.  
-- **Docs/** – Optional documentation and guides for each script.  
-
-Each script is modular and can be customized to fit your environment.
-
----
 
 ## ⚙️ Prerequisites
 
