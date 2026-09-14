@@ -27,17 +27,7 @@ cd Power-Shell-Toolkits
 
     Open and run any script in PowerShell as Administrator. Example:
 
-.\TxtToEventLog.ps1
 
-    Check Windows Event Viewer or follow the script’s instructions for output.
-
- Customization
-
-    Modify script variables to match your environment (e.g., file paths, log names, event sources).
-
-    Adjust EntryType for Information, Warning, or Error logs.
-
-    Change EventId to categorize different events.
 
  Notes
 
