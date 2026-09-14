@@ -1,0 +1,78 @@
+PowerShell IP Ping Checker
+
+A simple PowerShell script that reads a list of IP addresses from a text file, tests their connectivity using ICMP Ping, and saves the results to an output text file.
+Features
+
+    Reads IP addresses from ips.txt
+    Pings each IP address once
+    Displays whether each IP is reachable or unreachable
+    Saves the results to ping-results.txt
+    Ignores empty lines
+    Uses a simple IP | Status format
+
+Requirements
+
+    Windows PowerShell 5.1 or PowerShell 7+
+    Network access to the target IP addresses
+    ICMP traffic must be allowed by the target device or firewall
+
+File Structure
+
+Place the following files in the same directory:
+
+                                                                    text
+.
+├── Ping-IPs.ps1
+└── ips.txt
+
+Input File
+
+Create a file named ips.txt and add one IP address per line:
+
+                                                                    text
+8.8.8.8
+192.168.1.1
+192.168.1.10
+
+Empty lines are ignored.
+Usage
+
+    Download or clone this repository.
+    Open the ips.txt file.
+    Add the IP addresses you want to test.
+    Right-click Ping-IPs.ps1.
+    Select Run with PowerShell.
+
+The script creates a file named ping-results.txt in the same directory.
+Example Output
+
+                                                                    text
+IP | Status
+8.8.8.8 | Reachable
+192.168.1.1 | Reachable
+192.168.1.10 | Unreachable
+
+Execution Policy
+
+If PowerShell prevents the script from running, open PowerShell as a user and run:
+
+                                                                    powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+Confirm the change if prompted, then run the script again.
+
+Alternatively, you can run the script without changing the permanent execution policy:
+
+                                                                    powershell
+powershell.exe -ExecutionPolicy Bypass -File .\Ping-IPs.ps1
+
+Notes
+
+    Reachable means that a Ping response was received.
+    Unreachable means that no Ping response was received.
+    An unreachable result does not necessarily mean that the device is offline. The device or firewall may be blocking ICMP traffic.
+    The output file is overwritten each time the script runs.
+
+License
+
+This project is provided for educational and administrative purposes. Feel free to use and modify it according to your needs.
